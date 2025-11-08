@@ -1,0 +1,63 @@
+body {
+  background-color: blueviolet;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.img {
+  border: 3px solid #d5ebcf;
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foto {
+  background-color: black;
+  display: block;
+  flex-direction: row;
+  gap: 20px;
+  padding-left: 20px;
+  justify-content: center;
+}
+.img{
+    width: 189px;
+    margin: 0;
+}
+
+.promo {
+    text-align: center;
+    color: red;
+}
+
+.cod {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+    padding: 10px 15px;
+    color: black;
+    border: 2px dotted black;
+    border-radius: 15px;
+}
+&p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#tombol {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid white;
+    background-color: yellow;
+    color: red;
+}
