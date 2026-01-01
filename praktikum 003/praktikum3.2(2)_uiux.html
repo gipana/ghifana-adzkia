@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemesanan Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .header {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .nav-tab {
+            padding: 10px 20px;
+            border-right: 1px solid #ccc;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .nav-tab.active {
+            background-color: white;
+            border-bottom: 1px solid white;
+            margin-bottom: -1px;
+        }
+        
+        .result-content {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .image-section {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #999;
+            background-color: #f9f9f9;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .image-placeholder::before {
+            content: "×";
+            font-size: 60px;
+            transform: rotate(45deg);
+        }
+        
+        .result-fields {
+            flex: 1;
+        }
+        
+        .result-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .result-group label {
+            width: 120px;
+            display: inline-block;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+        
+        .result-value {
+            flex: 1;
+            padding: 5px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            min-height: 20px;
+            line-height: 1.4;
+            white-space: pre-line;
+        }
+        
+        .checkbox-results {
+            margin: 15px 0;
+        }
+        
+        .checkbox-results input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        
+        .contact-section {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+        }
+        
+        .back-btn {
+            background-color: #6c757d;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-right: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+        
+        .edit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .edit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header dengan URL bar simulasi -->
+        <div class="header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 16px;">← → ↻ ⌂</span>
+                <div style="flex: 1; background: white; border: 1px solid #999; padding: 3px 10px;">
+                    http://
+                </div>
+                <span style="font-size: 16px;">⚙</span>
+            </div>
+        </div>
+        
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <a href="#" class="nav-tab active">Home</a>
+            <a href="#" class="nav-tab">Register</a>
+            <a href="#" class="nav-tab">Policy</a>
+            <a href="#" class="nav-tab">About</a>
+        </div>
+        
+        <!-- Result Content -->
+        <div class="result-content">
+            <!-- Image Display Section -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div class="image-section">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+            
+            <!-- Result Fields -->
+            <div class="result-fields">
+                <div class="result-group">
+                    <label>Title Here</label>
+                    <div class="result-value">MacBook Air E800</div>
+                </div>
+                
+                <div class="result-group">
+                    <label>Description</label>
+                    <div class="result-value">Year : 2009<br>Model<br>Condition : Mint</div>
+                </div>
+                
+                <div class="result-group">
+                    <label>Total Amount</label>
+                    <div class="result-value">£800</div>
+                </div>
+                
+                <div class="result-group">
+                    <label>Pay to</label>
+                    <div class="result-value">123-456-789-0</div>
+                </div>
+                
+                <div class="result-group">
+                    <label>Payment Type</label>
+                    <div class="result-value">
+                        <select style="border: 1px solid #999; padding: 3px; background: white;">
+                            <option selected>Visa Debit</option>
+                            <option>Mastercard</option>
+                            <option>Bank Transfer</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="result-group">
+                    <label>Account Holder</label>
+                    <div class="result-value">Name Here</div>
+                </div>
+                
+                <div class="result-group">
+                    <label>Account No</label>
+                    <div class="result-value">123-456-789-0</div>
+                </div>
+                
+                <!-- Checkboxes -->
+                <div class="checkbox-results">
+                    <div style="margin-bottom: 5px;">
+                        <input type="checkbox" id="result-send-mobile" checked disabled>
+                        <label for="result-send-mobile">Send to Mobile Phone</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="result-send-email" checked disabled>
+                        <label for="result-send-email">Email me copy of transaction</label>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-section">
+                    <div class="result-group">
+                        <label>Send to Mobile Phone</label>
+                        <div class="result-value">1234567890, 1234567891</div>
+                    </div>
+                    
+                    <div class="result-group">
+                        <label>Send to Email</label>
+                        <div class="result-value">mfmm2g13@soton.acuk, fys_06@yahoo.com</div>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div style="margin-top: 20px;">
+                    <a href="praktikum3.2(2)_uiux.html" class="back-btn">Kembali ke Form</a>
+                    <a href="praktikum3.2(2)_uiux.html" class="edit-btn">Edit Pesanan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
